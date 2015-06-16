@@ -12,6 +12,9 @@ $(document).ready(function () {
 
   camera.position.z = 100;
 
+  var controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.target = new THREE.Vector3(0, 0, 0);
+
   // copied form STLLoader github vvvv
 
   var body;
@@ -26,8 +29,8 @@ $(document).ready(function () {
   function render() {
     requestAnimationFrame( render );
     renderer.render( scene, camera );
-    body.rotation.x += 0.01;
-    body.rotation.y += 0.01;
+    body.rotation.z += 0.1;
+    body.rotation.y += 0.1;
   }
   render();
 
