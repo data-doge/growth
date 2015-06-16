@@ -39,6 +39,8 @@ $(document).ready(function () {
     body.rotation.y += 0.1;
     body.position.y = counter % 100 + 10;
   }
+
+  // render when media loaded
   $(window).load(function () {
     render();
   })
